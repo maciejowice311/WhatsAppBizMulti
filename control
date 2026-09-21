@@ -1,0 +1,9 @@
+Package: com.yourname.whatsappbizmulti
+Name: WhatsAppBizMulti
+Depends: mobilesubstrate, preferenceloader, ws.hbang.common (>= 1.14), firmware (>= 15.0)
+Architecture: iphoneos-arm64
+Description: Multi-container toolkit for WhatsApp Business — random GPS spoof, IDFV rotation, JB bypass, Crane integration
+Maintainer: YourName <your@email.com>
+Author: YourName
+Section: Tweaks
+Version: 1.0.0
