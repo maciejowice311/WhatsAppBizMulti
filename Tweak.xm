@@ -14,6 +14,10 @@
 #include <sys/sysctl.h>
 #include <unistd.h>
 
+#ifndef PT_DENY_ATTACH
+#define PT_DENY_ATTACH 0x0F
+#endif
+
 %config(generator=internal)
 
 #pragma mark - === UTILITIES ===
