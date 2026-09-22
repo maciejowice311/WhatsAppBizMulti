@@ -7,7 +7,7 @@ ARCHS = arm64 arm64e
 TWEAK_NAME = WhatsAppBizMulti
 
 WhatsAppBizMulti_FILES = Tweak.xm
-WhatsAppBizMulti_CFLAGS = -fobjc-arc
+WhatsAppBizMulti_CFLAGS = -fobjc-arc -Wno-unused-function
 WhatsAppBizMulti_FRAMEWORKS = UIKit CoreLocation
 WhatsAppBizMulti_PRIVATE_FRAMEWORKS = AppSupport
 WhatsAppBizMulti_LIBRARIES = substrate
