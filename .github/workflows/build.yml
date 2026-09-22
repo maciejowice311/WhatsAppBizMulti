@@ -9,7 +9,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install Theos
-      run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+      run: |
+        git clone --recursive https://github.com/theos/theos.git $HOME/theos
+        curl -LO https://github.com/theos/sdks/archive/master.zip
+        unzip -q master.zip
+        mkdir -p $HOME/theos/sdks
+        mv sdks-master/* $HOME/theos/sdks/
+        rm -rf sdks-master master.zip
     - name: Build
       run: |
         export THEOS=$HOME/theos
