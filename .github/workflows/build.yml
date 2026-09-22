@@ -8,8 +8,9 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install Theos
+    - name: Install dependencies
       run: |
+        brew install ldid dpkg
         git clone --recursive https://github.com/theos/theos.git $HOME/theos
         curl -LO https://github.com/theos/sdks/archive/master.zip
         unzip -q master.zip
